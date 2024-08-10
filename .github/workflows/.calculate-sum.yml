@@ -1,0 +1,22 @@
+name: Calculate Sum (private)
+
+on:
+  workflow_dispatch:
+    inputs:
+      num1:
+        description: 'First number'
+        required: true
+      num2:
+        description: 'Second number'
+        required: true
+      num3:
+        description: 'Third number'
+        required: true
+
+jobs:
+  calculate-sum:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Calculate Sum
+        run: |
+          echo "Sum: $(( ${{ github.event.inputs.num1 }} + ${{ github.event.inputs.num2 }} + ${{ github.event.inputs.num3 }} ))"
