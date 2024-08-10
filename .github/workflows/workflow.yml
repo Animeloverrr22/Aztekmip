@@ -1,0 +1,16 @@
+name: Trigger Private Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  trigger-private-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Private Workflow
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.PRIVATE_REPO_TOKEN }}
+          repository: <public-repo-owner>/<public-repo-name>
+          event-type: calculate-sum
+          client-payload: '{"num1": 10, "num2": 20, "num3": 30}'
