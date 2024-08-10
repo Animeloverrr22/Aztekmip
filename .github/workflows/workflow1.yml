@@ -11,7 +11,7 @@ jobs:
         run: |
           echo "Token: ${{ secrets.PRIVATE_REPO_TOKEN }}"
           echo "Repository: $GITHUB_REPOSITORY"
-          echo "Event: $GITHUB_EVENT_NAME
+          echo "Event: $GITHUB_EVENT_NAME"
       - name: Trigger Private Workflow
         uses: peter-evans/repository-dispatch@v1
         with:
