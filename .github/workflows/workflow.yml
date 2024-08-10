@@ -11,6 +11,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.PRIVATE_REPO_TOKEN }}
-          repository: <public-repo-owner>/<public-repo-name>
+          repository: <Animeloverrr22>/<Aztekmip>
           event-type: calculate-sum
           client-payload: '{"num1": 10, "num2": 20, "num3": 30}'
