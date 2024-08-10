@@ -19,3 +19,9 @@ jobs:
           repository: <Animeloverrr22>/<Aztekmip>
           event-type: calculate-sum
           client-payload: '{"num1": 10, "num2": 20, "num3": 30}'
+
+      - name: Debug Dispatch
+        run: |
+          echo "Dispatch Status: ${{ job.status }}"
+          echo "Dispatch Output: ${{ steps.trigger.outputs }}"
+    
