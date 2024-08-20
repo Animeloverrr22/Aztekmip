@@ -15,10 +15,7 @@ jobs:
 
       - name: check packages installed 
         run: cmd /c show.bat
-
-      - name: Time Counter
-        run: powershell -File timeout.ps1
-        
+  
       - name: Timeout 
         run: python time.py
         
