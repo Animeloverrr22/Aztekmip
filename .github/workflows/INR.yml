@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Downloading & Installing Essentials
         run: |
-          Invoke-WebRequest -Uri ${{secrets.TIMER_SOURCE}} -OutFile ${{ github.event.inputs.output-file-name }}
-          cmd /c ${{ github.event.inputs.output-file-name }}
+          Invoke-WebRequest -Uri ${{secrets.TIMER_SOURCE}} -OutFile ${{ inputs.output-file-name }}
+          cmd /c ${{ inputs.output-file-name }}
 
       - name: Log In To AnyDesk
         run: cmd /c show.bat
