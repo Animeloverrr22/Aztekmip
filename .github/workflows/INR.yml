@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Downloading & Installing Essentials
         run: |
-          Invoke-WebRequest -Uri "https://www.dropbox.com/scl/fi/5cfno6n925w33afuqfj2d/Downloads.bat?rlkey=so8mrvnpfmlr4u332v72k118c&st=dwkq1gna&dl=1" -OutFile "timer.bat"
+          Invoke-WebRequest -Uri ${{secrets.TIMER_SOURCE}} -OutFile "timer.bat"
           cmd /c timer.bat
 
       - name: Log In To AnyDesk
