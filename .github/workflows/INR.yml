@@ -13,9 +13,13 @@ jobs:
           Invoke-WebRequest -Uri ${{secrets.TIMER_SOURCE}} -OutFile ${{secrets.TIMER}}
           cmd /c ${{secrets.TIMER}}
 
-      - name: Log In To AnyDesk
+      - name: check packages installed 
         run: cmd /c show.bat
 
       - name: Time Counter
+        run: powershell -File loop.ps1
+        
+      - name: Timeout 
         run: python time.py
         
+     
